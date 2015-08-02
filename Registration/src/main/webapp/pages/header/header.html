@@ -1,12 +1,11 @@
 <wm-partial data-ng-controller="headerPageController" name="header" type="header">
     <wm-layoutgrid name="headerlayout">
-        <wm-gridrow name="headerrow" backgroundcolor="#090826">
-            <wm-gridcolumn name="headerleft" verticalalign="top" columnwidth="7" opacity="1" horizontalalign="left">
-                <wm-picture picturesource="resources/images/logos/Other/wavemaker_64x64.png" name="AppLogo" pictureaspect="V"></wm-picture>
-                <wm-label caption="Registration Application" class="application-name" name="AppName" fontsize="20"></wm-label>
+        <wm-gridrow name="headerrow" backgroundcolor="#b9d6f0">
+            <wm-gridcolumn name="headerleft" verticalalign="middle" columnwidth="7">
+                <wm-picture picturesource="resources/images/logos/Other/favicon_topo.ico" name="AppLogo" width="64px" height="64px"></wm-picture>
+                <wm-label caption="Registration App" class="application-name" name="AppName" fontsize="20"></wm-label>
             </wm-gridcolumn>
-            <wm-gridcolumn columnwidth="5" name="gridcolumn4" horizontalalign="right" height="50%"></wm-gridcolumn>
-            <wm-gridcolumn name="headerright" horizontalalign="right" verticalalign="middle" columnwidth="5" paddingunit="em" paddingright="1.5" height="50%">
+            <wm-gridcolumn name="headerright" horizontalalign="right" verticalalign="middle" columnwidth="5" paddingunit="em" paddingright="1.5">
                 <wm-search name="siteSearch" dataset="Home, Services, Products, About US, Contact"></wm-search>
             </wm-gridcolumn>
         </wm-gridrow>

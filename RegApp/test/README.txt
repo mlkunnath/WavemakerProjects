@@ -1,1 +1,0 @@
-Tests specific for the application are placed inside this folder.
