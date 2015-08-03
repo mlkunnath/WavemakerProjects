@@ -1,0 +1,113 @@
+<style id="Login.css">
+
+</style>
+<script id="Login.js">
+Application.$controller("LoginPageController", ["$scope",
+    function ($scope) {
+        "use strict";
+        /* perform any action with the variables inside this block(on-page-load) */
+        $scope.onPageVariablesReady = function () {
+            /*
+             * variables can be accessed through '$scope.Variables' property here
+             * e.g. $scope.Variables.staticVariable1.getData()
+             */
+        };
+        /* perform any action with widgets inside this block */
+        $scope.onPageReady = function () {
+            /*
+             * widgets can be accessed through '$scope.Widgets' property here
+             * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+             */
+        };
+    }
+]);
+
+Application.$controller("loginFormController", ["$scope",
+    function ($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+</script>
+<script id="Login.variables.json">
+var _LoginPage_Variables_ ={
+	"loginVariable": {
+		"type": "string",
+		"owner": "Page",
+		"dataSet": {
+			"username": "",
+			"password": ""
+		},
+		"dataBinding": {
+			"username": "bind:Widgets.usernametext.datavalue",
+			"password": "bind:Widgets.passwordtext.datavalue"
+		},
+		"saveInPhonegap": false,
+		"startUpdate": false,
+		"autoUpdate": false,
+		"onError": "Javascript",
+		"useDefaultSuccessHandler": true,
+		"category": "wm.LoginVariable",
+		"_id": "wm-wm.LoginVariable1398237232072"
+	}
+}
+</script>
+<script id="Login.html" type="text/ng-template">
+<wm-page layouttype="one-column" columns="1" data-ng-controller="LoginPageController" name="lPage">
+    <wm-header height="auto" name="lHeader" backgroundcolor="#090826">
+        <wm-layoutgrid name="lHeaderlayout" height="6em">
+            <wm-gridrow name="lHeaderrow">
+                <wm-gridcolumn name="lHeaderleft" verticalalign="middle" columnwidth="8">
+                    <wm-picture picturesource="resources/images/logos/Other/wavemaker_64x64.png" marginbottom="0.5" margintop="0.5" marginleft="0.5" marginright="0.5" marginunit="em" name="lAppLogo"></wm-picture>
+                    <wm-label verticalalign="bottom" caption="Registration Application" class="application-name h1" name="lAppName" fontfamily="Cambria"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn name="lLoginright" columnwidth="4">
+                    <wm-login name="loginForm" data-ng-controller="loginFormController" on-submit="loginVariable" show="true" backgroundcolor="#090826" height="100%">
+                        <wm-gridcolumn name="lUsername" columnwidth="4" height="100%">
+                            <wm-composite name="userNameField">
+                                <wm-label caption="User ID" name="userNameLabel" height="25px" width="100%" color="#ffffff"></wm-label>
+                                <wm-text placeholder="Enter username" name="usernametext" class="app-login-username" width="95%" autocomplete="off" autocorrect="off" autocapitalize="off" updateon="default"></wm-text>
+                            </wm-composite>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="lPassword" columnwidth="4" height="100%">
+                            <wm-composite name="passwordField">
+                                <wm-label caption="Password" name="passwordLabel" height="25px" width="100%" color="#ffffff"></wm-label>
+                                <wm-text type="password" name="passwordtext" placeholder="Enter password" class="app-login-password" width="95%" autocomplete="off" autocorrect="off" autocapitalize="off" updateon="default"></wm-text>
+                            </wm-composite>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="lSubmit" columnwidth="4" height="75%">
+                            <wm-composite name="remembermeFields" class="app-login-rememberme" height="20px" margintop="0" captionposition="left" horizontalalign="left">
+                                <wm-checkbox caption="Remember Me" name="remembermeCheck" verticalalign="middle" height="20px" textalign="left" margintop="0"></wm-checkbox>
+                            </wm-composite>
+                            <wm-button type="submit" caption="Log In" class="app-login-button btn-primary" name="loginButton" marginleft="0" marginunit="em" width="60%"></wm-button>
+                        </wm-gridcolumn>
+                    </wm-login>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-header>
+    <wm-content name="lContent">
+        <wm-page-content columnwidth="12" name="column1">
+            <wm-layoutgrid name="loginGrid" height="auto">
+                <wm-gridrow name="loginGridRow" height="100%">
+                    <wm-gridcolumn name="paddingColumnLeft" columnwidth="4"></wm-gridcolumn>
+                    <wm-gridcolumn name="loginContentColumn" columnwidth="4" horizontalalign="left"></wm-gridcolumn>
+                    <wm-gridcolumn name="paddingColumnRight" columnwidth="4"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer name="lFooter">
+        <wm-layoutgrid height="60" name="lFooterlayout">
+            <wm-gridrow name="lFooterrow">
+                <wm-gridcolumn name="lFooterleft" verticalalign="bottom">
+                    <wm-label caption="Powered by Kiran Kumar Kotari" textalign="left" name="lPoweredby"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn horizontalalign="right" verticalalign="bottom" name="lFooterright">
+                    <wm-label caption="Copyright 2015-2016 NextGen Dreams Software Solutions" textalign="right" name="lCopyright"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-footer>
+</wm-page>
+</script>
