@@ -1,0 +1,70 @@
+<wm-page layouttype="one-column" columns="1" data-ng-controller="LoginBackupPageController" name="lPage">
+    <wm-header height="auto" name="lHeader" backgroundcolor="#090826">
+        <wm-layoutgrid name="lHeaderlayout" height="6em">
+            <wm-gridrow name="lHeaderrow">
+                <wm-gridcolumn name="lHeaderleft" verticalalign="middle" columnwidth="8">
+                    <wm-picture picturesource="resources/images/logos/Other/wavemaker_64x64.png" marginbottom="0.5" margintop="0.5" marginleft="0.5" marginright="0.5" marginunit="em" name="lAppLogo"></wm-picture>
+                    <wm-label verticalalign="bottom" caption="Registration Application" class="application-name h1" name="lAppName" fontfamily="Cambria"></wm-label>
+                </wm-gridcolumn>
+
+                <wm-gridcolumn name="lLoginright" columnwidth="4">
+                    <wm-login name="loginForm" data-ng-controller="loginFormController" on-submit="loginVariable" show="true" backgroundcolor="#090826" height="100%">
+                        <wm-container name="lcontainer1" fontfamily="Cambria">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn3">
+                                <wm-label caption="User ID" name="userNameLabel" height="25px" width="100%" color="#ffffff" fontsize="16"></wm-label>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn4">
+                                <wm-label caption="Password" name="passwordLabel" height="25px" width="100%" color="#ffffff" fontsize="16"></wm-label>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn5">
+                                <wm-composite name="remembermeFields" class="app-login-rememberme" height="20px" margintop="0" captionposition="left" horizontalalign="left">
+                                    <wm-checkbox caption="Remember Me" name="remembermeCheck" verticalalign="middle" height="20px" textalign="left" margintop="0" fontweight="bold" fontsize="14" whitespace="nowrap"></wm-checkbox>
+                                </wm-composite>
+                            </wm-gridcolumn>
+                        </wm-container>
+                        <wm-container name="lcontainer2">
+                            <wm-gridcolumn columnwidth="4">
+                                <wm-composite name="userNameField">
+                                    <wm-text placeholder="Enter username" name="usernametext" class="app-login-username" width="95%" autocomplete="off" autocorrect="off" autocapitalize="off" updateon="default"></wm-text>
+                                </wm-composite>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4">
+                                <wm-composite name="passwordField">
+                                    <wm-text type="password" name="passwordtext" placeholder="Enter password" class="app-login-password" width="95%" autocomplete="off" autocorrect="off" autocapitalize="off" updateon="default"></wm-text>
+                                </wm-composite>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4">
+                                <wm-button type="submit" caption="Log In" class="app-login-button btn-primary" name="loginButton" marginleft="0" marginunit="em" width="60%"></wm-button>
+                            </wm-gridcolumn>
+                        </wm-container>
+                        <wm-container name="lcontainer3"></wm-container>
+                    </wm-login>
+                </wm-gridcolumn>
+
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-header>
+    <wm-content name="lContent">
+        <wm-page-content columnwidth="12" name="column1">
+            <wm-layoutgrid name="loginGrid" height="auto">
+                <wm-gridrow name="loginGridRow" height="100%">
+                    <wm-gridcolumn name="paddingColumnLeft" columnwidth="4"></wm-gridcolumn>
+                    <wm-gridcolumn name="loginContentColumn" columnwidth="4" horizontalalign="left"></wm-gridcolumn>
+                    <wm-gridcolumn name="paddingColumnRight" columnwidth="4"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer name="lFooter">
+        <wm-layoutgrid height="60" name="lFooterlayout">
+            <wm-gridrow name="lFooterrow">
+                <wm-gridcolumn name="lFooterleft" verticalalign="bottom">
+                    <wm-label caption="Powered by Kiran Kumar Kotari" textalign="left" name="lPoweredby"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn horizontalalign="right" verticalalign="bottom" name="lFooterright">
+                    <wm-label caption="Copyright 2015-2016 NextGen Dreams Software Solutions" textalign="right" name="lCopyright"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-footer>
+</wm-page>

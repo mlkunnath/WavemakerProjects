@@ -74,5 +74,13 @@
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
 		"_id": "wm-wm.Variable1438509307125"
+	},
+	"goToPage-LoginBackup": {
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "LoginBackup",
+		"dataBinding": {},
+		"category": "wm.NavigationVariable",
+		"_id": "wm-wm.NavigationVariable1438604962654"
 	}
 }
